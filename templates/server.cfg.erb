@@ -1,0 +1,18 @@
+<% if !@define_host.empty? -%>
+<% @define_host.each do |key,value| -%>
+define host {
+<% value.each do |directive| -%>
+  <%= directive %>
+<% end -%>
+}
+<% end -%>
+<% end -%>
+<% if !@define_service.empty? -%>
+<% @define_service.each do |key,value| -%>
+define service {
+<% value.each do |directive| -%>
+  <%= directive %>
+<% end -%>
+}
+<% end -%>
+<% end -%>

@@ -1,0 +1,42 @@
+{
+  "name": "aneesh-nagios",
+  "version": "1.2.0",
+  "author": "aneesh",
+  "summary": "Puppet module for nagios",
+  "license": "Apache-2.0",
+  "source": "https://github.com/aneesh-c/puppet-nagios",
+  "project_page": "https://github.com/aneesh-c/puppet-nagios",
+  "issues_url": "https://github.com/aneesh-c/puppet-nagios/issues",
+  "tags": [
+    "nagios",
+    "nagios3",
+    "monitoring",
+    "nrpe"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "dependencies": [
+  
+  ]
+}
