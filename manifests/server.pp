@@ -11,7 +11,7 @@ define nagios::server (
     ensure => directory,
   }
   file { "${configdir_server}/${configfile_server}":
-    require => package[$package_name],
+    require => Package[$package_name],
     content => template($template_server),
   }
 }
