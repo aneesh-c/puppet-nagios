@@ -5,7 +5,7 @@ class nagios::commands (
   $define_command      = [],
 ) inherits nagios::params {
   file { $configfile_commands:
-    require => package[$package_name],
+    require => Package[$package_name],
     content => template($template_commands),
   }
 }
