@@ -8,12 +8,12 @@ class nagios::nrpe (
 ) inherits ::nagios::params {
   package { $package_name_nrpe: ensure => installed }
   file { $configfile_nrpe:
-    require => package[$package_name_nrpe],
+    require => Package[$package_name_nrpe],
     content => template($template_nrpe),
   }
   if $::osfamily == 'RedHat' {
     service { 'nrpe':
-      require => package[$package_name_nrpe],
+      require => Package[$package_name_nrpe],
       enable  => true,
     }
   }
