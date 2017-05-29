@@ -23,11 +23,11 @@ class nagios (
 ) inherits ::nagios::params {
   package { $package_name: ensure => installed }
   file { $configfile_nagios:
-    require => package[$package_name],
+    require => Package[$package_name],
     content => template($template_nagios),
   }
   file { $configfile_contacts:
-    require => package[$package_name],
+    require => Package[$package_name],
     content => template($template_contacts),
   }
   if $::osfamily == 'RedHat' {
