@@ -32,7 +32,7 @@ class nagios (
   }
   if $::osfamily == 'RedHat' {
     service { 'nagios':
-      require => package[$package_name],
+      require => Package[$package_name],
       enable  => true,
     }
   }
