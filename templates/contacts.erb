@@ -1,0 +1,86 @@
+###############################################################################
+# CONTACTS.CFG - SAMPLE CONTACT/CONTACTGROUP DEFINITIONS
+#
+#
+# NOTES: This config file provides you with some example contact and contact
+#        group definitions that you can reference in host and service
+#        definitions.
+#       
+#        You don't need to keep these definitions in a separate file from your
+#        other object definitions.  This has been done just to make things
+#        easier to understand.
+#
+###############################################################################
+
+
+
+###############################################################################
+###############################################################################
+#
+# CONTACTS
+#
+###############################################################################
+###############################################################################
+
+# Just one contact defined by default - the Nagios admin (that's you)
+# This contact definition inherits a lot of default values from the 'generic-contact' 
+# template which is defined elsewhere.
+
+define contact{
+<% if @contact_name -%>
+        contact_name                    <%= @contact_name %>		; Short name of user
+<% end -%>
+<% if @use -%>
+	use				<%= @use %>		; Inherit default values from generic-contact template (defined above)
+<% end -%>
+<% if @alias -%>
+        alias                           <%= @alias %>		; Full name of user
+<% end -%>
+
+<% if @email -%>
+        email                           <%= @email %>	; <<***** CHANGE THIS TO YOUR EMAIL ADDRESS ******
+<% end -%>
+<% if @service_notification_period -%>
+        service_notification_period     <%= @service_notification_period %>
+<% end -%>
+<% if @host_notification_period -%>
+        host_notification_period        <%= @host_notification_period %>
+<% end -%>
+<% if @service_notification_options -%>
+        service_notification_options    <%= @service_notification_options %>
+<% end -%>
+<% if @host_notification_options -%>
+        host_notification_options       <%= @host_notification_options %>
+<% end -%>
+<% if @service_notification_commands -%>
+        service_notification_commands   <%= @service_notification_commands %>
+<% end -%>
+<% if @host_notification_commands -%>
+        host_notification_commands      <%= @host_notification_commands %>
+<% end -%>
+        }
+
+
+
+###############################################################################
+###############################################################################
+#
+# CONTACT GROUPS
+#
+###############################################################################
+###############################################################################
+
+# We only have one contact in this simple configuration file, so there is
+# no need to create more than one contact group.
+
+define contactgroup{
+<% if @contactgroup_name -%>
+        contactgroup_name       <%= @contactgroup_name %>
+<% end -%>
+<% if @contactgroup_alias -%>
+        alias                   <%= @contactgroup_alias %>
+<% end -%>
+<% if @members -%>
+        members                 <%= @members %>
+<% end -%>
+        }
