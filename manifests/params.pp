@@ -6,7 +6,7 @@ class nagios::params {
     $configfile_contacts = '/etc/nagios/objects/contacts.cfg'
     $configdir_server = '/etc/nagios/servers'
   }
-  if $::osfamily == 'Debian' {
+  elsif $::osfamily == 'Debian' {
     $package_name = [ 'nagios3', 'nagios-nrpe-plugin' ]
     $package_name_nrpe = [ 'nagios-nrpe-server', 'nagios-plugins' ]
     $configfile_nagios = '/etc/nagios3/nagios.cfg'
