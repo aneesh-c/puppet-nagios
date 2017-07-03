@@ -6,7 +6,7 @@
   "manifests/nrpe.pp": "f0a42a76c89147506eab94f8bcc4719d",
   "manifests/params.pp": "847f8c5e2dc028c8fdfe40ea6ca78ac7",
   "manifests/server.pp": "941625f4723e8000e5eeec63284a95a4",
-  "metadata.json": "da9fd7ce77b8c42c235501a7f14c80ae",
+  "metadata.json": "7dca0347ee169430f1ba1637c77c4745",
   "templates/configfile.erb": "7c881577f4491355b0d4e2ff93a214a8",
   "templates/contacts.erb": "25b78fe289fd152a4e85492ced087f43",
   "templates/nrpe.erb": "c60e5da0c547e8dc5d2270eb4b2c97d5",
